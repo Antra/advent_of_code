@@ -1,4 +1,4 @@
-file = 'input.txt'
+file = '2021/puzzle1/input.txt'
 
 with open(file, 'r') as f:
     content = f.read()
