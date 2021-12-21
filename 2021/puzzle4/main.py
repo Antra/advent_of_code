@@ -143,7 +143,7 @@ while not any([board.check_win() for board in boards]):
 
 
 # Part 2
-# I added the get_remaining function as well, now we have to run until only 1 board has not won yet and then inspect the remaining board
+# I added the some additional checks to the round, now we have to run until only 1 board has not won yet and then inspect the remaining board
 while not [board.check_win() for board in boards].count(True) == len(boards):
     next_number = numbers.pop(0)
     execute_round(boards, next_number)
