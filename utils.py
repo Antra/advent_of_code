@@ -15,3 +15,23 @@ def read_text_file_lines(file):
         content = f.read()
 
         return content.split('\n')
+
+
+def splitter(sequence, sep=''):
+    """split sequence into sub-sequences on a separator
+
+    Args:
+        sequence (list): the sequence to split apart
+        sep (str, optional): the separator sequence. Defaults to ''.
+
+    Yields:
+        subsequence (list of int): yields a subsequence as int from the original sequence
+    """
+    chunk = []
+    for val in sequence:
+        if val == sep:
+            yield chunk
+            chunk = []
+        else:
+            chunk.append(val)
+    yield chunk
